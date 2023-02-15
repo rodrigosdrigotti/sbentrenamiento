@@ -1,0 +1,174 @@
+.pageFormulario {
+    height: 99vh;
+    width: 100%;
+    background-image: url("..//img/fondoPared.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    user-select: none;
+    > h1 {
+        font-size: 56px;
+        color: #FFF;
+        padding-top: 70px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+    > p {
+        text-align: center;
+        font-size: 36px;
+        color: #FFF;
+        margin-top: 50px;
+        letter-spacing: 1px;
+    }
+    #svg_form_time {
+        height: 15px;
+        max-width: 80%;
+        margin: 40px auto 20px;
+        display: block;
+    }
+    #svg_form_time circle,
+    #svg_form_time rect {
+        fill: white;
+    }
+    .button {
+        background: rgba(254, 97, 72);
+        border-radius: 5px;
+        padding: 15px 25px;
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+        box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+    }
+    .disabled {
+        display:none;
+    }
+    > section {
+        padding: 50px;
+        max-width: 600px;
+        margin: 30px auto;
+        background:white;
+        background:rgba(255,255,255,0.9);
+        backdrop-filter:blur(10px);
+        box-shadow:0px 2px 10px rgba(0,0,0,0.3);
+        border-radius:5px;
+        transition:transform 0.2s ease-in-out;
+        p {
+            font-weight: bolder;
+            text-align:justify;
+            margin-top:0;
+        }
+        > input {
+            width: 100%;
+            margin: 7px 0px;
+            display: inline-block;
+            padding: 12px 25px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            font-size: 1em;
+            font-family:inherit;
+            background:white;
+            outline: none;
+        }
+        textarea {
+            width: 100%;
+            margin: 7px 0px;
+            display: inline-block;
+            padding: 10px 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            font-size: 1em;
+            font-family:inherit;
+            background:white;
+            outline: none;
+        }
+        > .checkSexo {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            > .titleSexo {
+                margin-right: 40px;
+                font-weight: bold;
+            }
+            > h4 {
+                font-weight: normal;
+                margin: 0 10px;
+            }
+        }
+        > .checkObjetivos {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            > .objetivos {
+                display: flex;
+                flex-flow: column wrap;
+            }
+            .cajaOpcionesPlan {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .opcion {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            > h4 {
+                font-weight: normal;
+                margin: 0 15px;
+            }
+        }
+        .tgl {
+            display: none;
+        }
+        .tgl + .tgl-btn {
+            outline: 0;
+            display: block;
+            width: 2.5em;
+            height: 1.5em;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+        }
+        .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 50%;
+            height: 100%;
+        }
+        .tgl + .tgl-btn:after {
+            left: 0;
+        }
+        .tgl + .tgl-btn:before {
+            display: none;
+        }
+        .tgl-flat + .tgl-btn {
+            padding: 2px;
+            transition: all 0.2s ease;
+            background: #fff;
+            border: 3px solid #f2f2f2;
+            border-radius: 2em;
+        }
+        .tgl-flat + .tgl-btn:after {
+            transition: all 0.2s ease;
+            background: #f2f2f2;
+            content: "";
+            border-radius: 1em;
+        }
+        .tgl-flat:checked + .tgl-btn {
+            border: 3px solid rgba(254, 97, 72);
+        }
+        .tgl-flat:checked + .tgl-btn:after {
+            left: 50%;
+            background: rgba(254, 97, 72);;
+        }
+    }
+}

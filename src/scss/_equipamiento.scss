@@ -1,0 +1,54 @@
+.menu-form {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    .btn {
+        color: black;
+        background-color: rgba(254, 97, 72, 0.9);
+        border: none;
+        width: 100px;
+        padding: 10px;
+        margin-left: 100px;
+        border-radius: 10px;
+        font-family: 'Sofia Sans Extra Condensed';  
+        font-weight: bolder;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        @media (max-width: 768px) {
+            margin: 10px 0 0 0;
+        }
+    }    
+}
+.pageEquipamiento {
+    height: 89vh;
+    width: 100%;
+    background-image: url("..//img/fondoPared.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    > h1 {
+        font-size: 126px;
+        color: rgba(255, 255, 255, 0.45);
+        padding-top: 120px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+    > p {
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 100px;
+        font-size: 80px;
+        text-align: center;
+    }
+    > i {
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 80px;
+        font-size: 300px;
+    }
+}

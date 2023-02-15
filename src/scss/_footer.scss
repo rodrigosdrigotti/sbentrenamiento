@@ -1,0 +1,80 @@
+.footer {
+    background-color: rgba(254, 97, 72);
+    height: 500px; 
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 768px) {
+        height: 800px;
+        flex-direction: column;
+        align-items: center;
+    }
+    > .info {
+        width: 50%;
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 26px;
+        > h4 {
+            font-size: 44px;
+        }
+        > .footer-icons {
+            width: 150px;
+            height: 35px;
+            font-size: 30px;
+            display: flex;
+            color: black;
+            justify-content: space-evenly;
+            padding: 4px;
+            cursor: pointer;
+        }
+    }
+    > .contacto {
+        width: 50%;
+        margin-top: 70px;
+        > .formularioContacto {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            > input {
+                height: 40px;
+                background: none;
+                border: black 2px solid;
+                padding: 5px;
+                font-size: 22px;
+                font-family: 'Sofia Sans Extra Condensed'; 
+                outline: none; 
+                &::placeholder {
+                    color: black;
+                }
+            }
+            > textarea {
+                height: 110px;
+                background: none;
+                border: black 2px solid;
+                padding: 5px;
+                font-size: 22px;
+                font-family: 'Sofia Sans Extra Condensed'; 
+                outline: none;  
+                &::placeholder {
+                    color: black;
+                }
+            }
+            > button {
+                width: 150px;
+                height: 40px;
+                align-self: flex-end;
+                background-color: black;
+                border: none;
+                color: rgba(254, 97, 72);
+                font-size: 22px;
+                font-family: 'Sofia Sans Extra Condensed';  
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+

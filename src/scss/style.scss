@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Extra+Condensed');
+@import "reset";
+@import "header";
+@import "sectionInicio";
+@import "entrenamientos";
+@import "sectionEntrenador";
+@import "sectionEntrenamiento";
+@import "sectionOpiniones";
+@import "equipamiento";
+@import "formulario";
+@import "footer";
+
+body {
+    font-family: 'Sofia Sans Extra Condensed';  
+    background-color: #030303;
+}
+.faqs {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 180px;
+    background-color: rgb(255, 255, 255, 0.20);
+    color: #FFF;
+}
+.faqs h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.faqs h4 {
+    color: rgba(254, 97, 72);
+    font-size: 32px;
+    margin: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.faqs p {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+
+
