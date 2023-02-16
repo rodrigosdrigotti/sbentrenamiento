@@ -15,25 +15,40 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
+        @media (max-width: 570px) {
+            background-position: center center;
+        }
         > .secciones-info {
             text-align: center;
             color: #FFF;  
             width: 70%;  
+            @media (max-width: 570px) {
+                width: 80%;
+            }
             > h6 {
                 font-size: 78px;
                 margin: 60px 0 10px 0;
                 letter-spacing: 5px;
                 color: rgba(254, 97, 72, 1);
+                @media (max-width: 570px) {
+                    font-size: 48px;
+                }
             }
             > h5 {
                 font-size: 38px;
                 margin: 10px 0 30px 0;
                 letter-spacing: 5px;
                 color: rgba(254, 97, 72, 1);
+                @media (max-width: 570px) {
+                    font-size: 24px;
+                }
             }
             > p {
                 font-size: 36px;
                 letter-spacing: 1px;
+                @media (max-width: 570px) {
+                    font-size: 20px;
+                }
             }
         }
         > .grupo-cards {
@@ -55,6 +70,10 @@
             border-radius: 15px;
             margin: 50px 25px;
             transition: 0.5s;
+            @media (max-width: 570px) {
+                width: 450px;
+                height: 350px;
+            }
             > .caja {
                 position: absolute;
                 top: 20px;
@@ -85,6 +104,9 @@
                         font-size: 114px;
                         margin-bottom: 30px;
                         color: rgba(255, 255, 255, 0.3);
+                        @media (max-width: 570px) {
+                            font-size: 104px;
+                        }
                     }
                     > h3 {
                         font-size: 38px;
@@ -93,6 +115,9 @@
                         z-index: 1;
                         transition: 0.5s;
                         margin-bottom: 15px;
+                        @media (max-width: 570px) {
+                            font-size: 28px;
+                        }
                     }
                     > p {
                         text-align: center;
@@ -102,6 +127,9 @@
                         color: rgba(255, 255, 255, 0.9);
                         z-index: 1;
                         transition: 0.5s;
+                        @media (max-width: 570px) {
+                            font-size: 18px;
+                        }
                     } 
                 }
             }
@@ -121,6 +149,7 @@
                 background-color: rgb(47, 47, 47);
                 color: rgb(255, 255, 255);
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-evenly;
                 align-items: center;
                 text-align: center;
@@ -128,6 +157,9 @@
                 border-radius: 10px;
                 margin: 0 8px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+                @media (max-width: 570px) {
+                    padding: 40px 20px;
+                }
                 > .tarjeta {
                     width: 300px;
                     background-color: rgb(67, 67, 67);
@@ -190,6 +222,9 @@
                     text-align: center;
                     border-radius: 10px;
                     margin: 0 8px;
+                    @media (max-width: 570px) {
+                        margin-top: 0px;
+                    }
                     > .tarjeta-header {
                         margin-bottom: 10px;
                         > h3 {
@@ -235,6 +270,9 @@
                             outline: none;
                             cursor: pointer;
                             font-family: 'Sofia Sans Extra Condensed';
+                            @media (max-width: 570px) {
+                                margin-bottom: 50px;
+                            }
                             &:hover {
                                 background-color: rgb(255, 107, 84);
                             }  

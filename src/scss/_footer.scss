@@ -32,6 +32,9 @@
     > .contacto {
         width: 50%;
         margin-top: 70px;
+        @media (max-width: 570px) {
+            display: flex;
+        }
         > .formularioContacto {
             width: 400px;
             display: flex;

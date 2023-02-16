@@ -185,7 +185,7 @@ ul {
   width: 100%;
   margin-top: -150px;
   background-image: url("..//img/index.jpg");
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -195,6 +195,11 @@ ul {
   color: #FFF;
   z-index: -1;
 }
+@media (max-width: 570px) {
+  .BG-index {
+    background-position: 80% center;
+  }
+}
 .BG-index > h1 {
   margin-left: 100px;
   color: rgb(254, 97, 72);
@@ -202,9 +207,22 @@ ul {
   font-size: 42px;
   text-transform: uppercase;
 }
+@media (max-width: 570px) {
+  .BG-index > h1 {
+    margin-left: 50px;
+    font-size: 22px;
+  }
+}
 .BG-index > h2 {
   margin-left: 100px;
   font-size: 114px;
+}
+@media (max-width: 570px) {
+  .BG-index > h2 {
+    margin-left: 50px;
+    font-size: 84px;
+    width: 300px;
+  }
 }
 .BG-index > p {
   margin-left: 100px;
@@ -212,6 +230,13 @@ ul {
   letter-spacing: 1px;
   font-size: 22px;
   margin-bottom: 20px;
+}
+@media (max-width: 570px) {
+  .BG-index > p {
+    margin-left: 50px;
+    font-size: 18px;
+    width: 300px;
+  }
 }
 .BG-index > .botonesInicio {
   display: flex;
@@ -230,6 +255,13 @@ ul {
   letter-spacing: 1px;
   cursor: pointer;
 }
+@media (max-width: 570px) {
+  .BG-index > .botonesInicio .btn-comenzar {
+    margin-left: 50px;
+    font-size: 14px;
+    width: 110px;
+  }
+}
 .BG-index > .botonesInicio .btn-comenzar:hover {
   background-color: rgb(254, 97, 72);
 }
@@ -247,6 +279,12 @@ ul {
   letter-spacing: 1px;
   cursor: pointer;
 }
+@media (max-width: 570px) {
+  .BG-index > .botonesInicio .btn-masInfo {
+    font-size: 14px;
+    width: 110px;
+  }
+}
 .BG-index > .botonesInicio .btn-masInfo:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(255, 255, 255);
@@ -256,37 +294,54 @@ ul {
   font-size: 20px;
   margin-right: 10px;
 }
+@media (max-width: 570px) {
+  .BG-index > .botonesInicio .fa-circle-chevron-right {
+    font-size: 12px;
+  }
+}
 
 .entrenamientos {
   width: 100%;
   height: 500px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-  background: #fff;
   display: flex;
+  text-align: center;
 }
-
-.entrenamientos .mascara1 {
+@media (max-width: 570px) {
+  .entrenamientos {
+    flex-direction: column;
+  }
+}
+.entrenamientos > .entrenamiento {
   width: 50%;
-  height: 500px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
+  height: 100%;
+  position: relative;
 }
-
-.entrenamientos .mascara2 {
-  width: 50%;
-  height: 500px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  right: 0;
+@media (max-width: 570px) {
+  .entrenamientos > .entrenamiento {
+    width: 100%;
+  }
 }
-
+.entrenamientos > .entrenamiento:hover h2 {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.entrenamientos > .entrenamiento:hover .mascara1, .entrenamientos > .entrenamiento:hover .mascara2 {
+  opacity: 1;
+}
+.entrenamientos > .entrenamiento > img {
+  transition: all 0.2s linear;
+}
+.entrenamientos > .entrenamiento > .mascara1,
+.entrenamientos > .entrenamiento > .mascara2 {
+  opacity: 0;
+  background-color: rgba(254, 97, 72, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+.entrenamientos > .entrenamiento h2 {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
 .entrenamientos img {
   display: block;
   position: relative;
@@ -294,7 +349,22 @@ ul {
   width: 100%;
   object-fit: cover;
 }
-
+.entrenamientos .mascara1 {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.entrenamientos .mascara2 {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+}
 .entrenamientos h2 {
   text-transform: uppercase;
   color: #fff;
@@ -306,41 +376,10 @@ ul {
   margin: 20px 0 0 0;
 }
 
-.entrenamiento {
-  width: 50%;
-}
-
-.entrenamiento img {
-  transition: all 0.2s linear;
-}
-
-.entrenamiento .mascara1,
-.entrenamiento .mascara2 {
-  opacity: 0;
-  background-color: rgba(254, 97, 72, 0.7);
-  transition: all 0.3s ease-in-out;
-}
-
-.entrenamiento h2 {
-  transform: translateX(-200px);
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.entrenamiento:hover .mascara1,
-.entrenamiento:hover .mascara2 {
-  opacity: 1;
-}
-
-.entrenamiento:hover h2 {
-  opacity: 1;
-  transform: translateX(0px);
-}
-
 .BG-entrenador {
   width: 100%;
   background-image: url("..//img/entrenador.jpg");
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -349,16 +388,35 @@ ul {
   color: #FFF;
   z-index: -1;
 }
+@media (max-width: 570px) {
+  .BG-entrenador {
+    background-position: right center;
+    margin-top: 350px;
+  }
+}
 .BG-entrenador > h2 {
   margin: 50px 0 40px 100px;
   font-size: 94px;
   letter-spacing: 1px;
+}
+@media (max-width: 570px) {
+  .BG-entrenador > h2 {
+    font-size: 42px;
+    margin: 50px 0 40px 70px;
+  }
 }
 .BG-entrenador > p {
   width: 650px;
   margin-left: 100px;
   font-size: 30px;
   letter-spacing: 1px;
+}
+@media (max-width: 570px) {
+  .BG-entrenador > p {
+    margin-left: 70px;
+    font-size: 20px;
+    width: 80%;
+  }
 }
 .BG-entrenador > .transformacion {
   background-color: #030303;
@@ -376,6 +434,12 @@ ul {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+@media (max-width: 570px) {
+  .BG-entrenador > .transformacion > h3 {
+    margin: 50px 0 20px 0;
+    font-size: 34px;
+  }
+}
 .BG-entrenador > .transformacion > .antesDespues {
   width: 100%;
   display: flex;
@@ -387,11 +451,21 @@ ul {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 570px) {
+  .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card {
+    gap: 10px;
+  }
+}
 .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card > h4 {
   font-size: 44px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media (max-width: 570px) {
+  .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card > h4 {
+    font-size: 24px;
+  }
 }
 .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card img {
   --s: 12.5px; /* size of the frame */
@@ -411,11 +485,25 @@ ul {
   cursor: pointer;
   margin: 15px;
 }
+@media (max-width: 570px) {
+  .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card img {
+    width: 100%;
+    padding: 0;
+    --w: 400px; /* width of the image */
+    margin: 0;
+  }
+}
 .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card img:hover {
   --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
   outline: var(--b) solid var(--c);
   outline-offset: calc(var(--s) / -2);
   --_i: calc(100% - 2*var(--s));
+}
+@media (max-width: 570px) {
+  .BG-entrenador > .transformacion > .antesDespues > .antesDespues-card img:hover {
+    outline: none;
+    outline-offset: none;
+  }
 }
 
 .fondo-precios {
@@ -437,10 +525,20 @@ ul {
   flex-direction: column;
   width: 100%;
 }
+@media (max-width: 570px) {
+  .fondo-precios > .secciones {
+    background-position: center center;
+  }
+}
 .fondo-precios > .secciones > .secciones-info {
   text-align: center;
   color: #FFF;
   width: 70%;
+}
+@media (max-width: 570px) {
+  .fondo-precios > .secciones > .secciones-info {
+    width: 80%;
+  }
 }
 .fondo-precios > .secciones > .secciones-info > h6 {
   font-size: 78px;
@@ -448,15 +546,30 @@ ul {
   letter-spacing: 5px;
   color: rgb(254, 97, 72);
 }
+@media (max-width: 570px) {
+  .fondo-precios > .secciones > .secciones-info > h6 {
+    font-size: 48px;
+  }
+}
 .fondo-precios > .secciones > .secciones-info > h5 {
   font-size: 38px;
   margin: 10px 0 30px 0;
   letter-spacing: 5px;
   color: rgb(254, 97, 72);
 }
+@media (max-width: 570px) {
+  .fondo-precios > .secciones > .secciones-info > h5 {
+    font-size: 24px;
+  }
+}
 .fondo-precios > .secciones > .secciones-info > p {
   font-size: 36px;
   letter-spacing: 1px;
+}
+@media (max-width: 570px) {
+  .fondo-precios > .secciones > .secciones-info > p {
+    font-size: 20px;
+  }
 }
 .fondo-precios > .secciones > .grupo-cards {
   display: flex;
@@ -474,6 +587,12 @@ ul {
   border-radius: 15px;
   margin: 50px 25px;
   transition: 0.5s;
+}
+@media (max-width: 570px) {
+  .fondo-precios > .secciones .secciones-card {
+    width: 450px;
+    height: 350px;
+  }
 }
 .fondo-precios > .secciones .secciones-card > .caja {
   position: absolute;
@@ -508,6 +627,11 @@ ul {
   margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.3);
 }
+@media (max-width: 570px) {
+  .fondo-precios > .secciones .secciones-card > .caja > .contenido > i {
+    font-size: 104px;
+  }
+}
 .fondo-precios > .secciones .secciones-card > .caja > .contenido > h3 {
   font-size: 38px;
   letter-spacing: 2px;
@@ -515,6 +639,11 @@ ul {
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
+}
+@media (max-width: 570px) {
+  .fondo-precios > .secciones .secciones-card > .caja > .contenido > h3 {
+    font-size: 28px;
+  }
 }
 .fondo-precios > .secciones .secciones-card > .caja > .contenido > p {
   text-align: center;
@@ -524,6 +653,11 @@ ul {
   color: rgba(255, 255, 255, 0.9);
   z-index: 1;
   transition: 0.5s;
+}
+@media (max-width: 570px) {
+  .fondo-precios > .secciones .secciones-card > .caja > .contenido > p {
+    font-size: 18px;
+  }
 }
 .fondo-precios > .grupo-tarjetas {
   width: 100%;
@@ -541,6 +675,7 @@ ul {
   background-color: rgb(47, 47, 47);
   color: rgb(255, 255, 255);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
@@ -548,6 +683,11 @@ ul {
   border-radius: 10px;
   margin: 0 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 570px) {
+  .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar {
+    padding: 40px 20px;
+  }
 }
 .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar > .tarjeta {
   width: 300px;
@@ -612,6 +752,11 @@ ul {
   border-radius: 10px;
   margin: 0 8px;
 }
+@media (max-width: 570px) {
+  .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar > .tarjeta-estandar-izq {
+    margin-top: 0px;
+  }
+}
 .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar > .tarjeta-estandar-izq > .tarjeta-header {
   margin-bottom: 10px;
 }
@@ -657,6 +802,11 @@ ul {
   outline: none;
   cursor: pointer;
   font-family: "Sofia Sans Extra Condensed";
+}
+@media (max-width: 570px) {
+  .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar > .tarjeta-estandar-izq > .tarjeta-footer button {
+    margin-bottom: 50px;
+  }
 }
 .fondo-precios > .grupo-tarjetas > .tarjetas > .tarjeta-estandar > .tarjeta-estandar-izq > .tarjeta-footer button:hover {
   background-color: rgb(255, 107, 84);
@@ -723,13 +873,24 @@ ul {
   align-items: center;
   margin-bottom: 100px;
 }
+@media (max-width: 570px) {
+  .opiniones {
+    height: auto;
+  }
+}
 .opiniones > h5 {
   color: #FFF;
   font-size: 44px;
   margin: 30px;
 }
+@media (max-width: 570px) {
+  .opiniones > h5 {
+    font-size: 36px;
+  }
+}
 .opiniones > .cards {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -745,6 +906,14 @@ ul {
   color: #FFF;
   padding: 20px 25px;
 }
+@media (max-width: 570px) {
+  .opiniones > .cards > .card {
+    height: 200px;
+    width: 70%;
+    padding: 15px 20px;
+    margin: 10px 0;
+  }
+}
 .opiniones > .cards > .card > p {
   font-size: 18px;
   letter-spacing: 1px;
@@ -752,11 +921,21 @@ ul {
   margin-top: 15px;
   color: #FFF;
 }
+@media (max-width: 570px) {
+  .opiniones > .cards > .card > p {
+    font-size: 14px;
+  }
+}
 .opiniones > .cards > .card > .estrellas {
   display: flex;
   margin: 20px;
   gap: 5px;
   color: #ffd901;
+}
+@media (max-width: 570px) {
+  .opiniones > .cards > .card > .estrellas {
+    margin: 10px;
+  }
 }
 .opiniones > .cards > .card > .caja-avatar {
   display: flex;
@@ -787,11 +966,21 @@ ul {
   letter-spacing: 2px;
   margin-bottom: -15px;
 }
+@media (max-width: 570px) {
+  .opiniones > .cards > .card > .caja-avatar > .avatar-info > h6 {
+    font-size: 20px;
+  }
+}
 .opiniones > .cards > .card > .caja-avatar > .avatar-info > p {
   font-size: 18px;
   letter-spacing: 1px;
   margin-top: 15px;
   color: #FFF;
+}
+@media (max-width: 570px) {
+  .opiniones > .cards > .card > .caja-avatar > .avatar-info > p {
+    font-size: 14px;
+  }
 }
 
 .menu-form {
@@ -1065,6 +1254,11 @@ ul {
   width: 50%;
   margin-top: 70px;
 }
+@media (max-width: 570px) {
+  .footer > .contacto {
+    display: flex;
+  }
+}
 .footer > .contacto > .formularioContacto {
   width: 400px;
   display: flex;
@@ -1142,3 +1336,89 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+
+@media (max-width: 570px) {
+  .faqs {
+    padding: 50px 25px;
+  }
+  .faqs h2 {
+    font-size: 34px;
+  }
+  .faqs h4 {
+    font-size: 22px;
+  }
+  .faqs p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+/* 
+.entrenamientos {
+    width: 100%;
+    height: 500px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff;
+    display: flex;
+}
+.entrenamientos .mascara1 {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.entrenamientos .mascara2 {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+}
+.entrenamientos img {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.entrenamientos h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 20px 0 0 0
+}
+.entrenamiento {
+    width: 50%;
+}
+.entrenamiento img { 
+    transition: all 0.2s linear;
+}
+.entrenamiento .mascara1,
+.entrenamiento .mascara2 {
+    opacity: 0;
+    background-color: rgba(254, 97, 72, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+.entrenamiento h2 {
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+.entrenamiento:hover .mascara1,
+.entrenamiento:hover .mascara2 {
+    opacity: 1;
+}
+.entrenamiento:hover h2 {
+opacity: 1;
+transform: translateX(0px);
+} */
