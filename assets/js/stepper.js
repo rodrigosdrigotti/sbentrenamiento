@@ -51,12 +51,23 @@ $('#svg_form_time rect').css('fill',base_color);
 $('#svg_form_time circle').css('fill',base_color);
 $("circle:nth-of-type(1)").css("fill", active_color);
 
+function validate(){
+  let name = document.getElementById("name");
+  if(name.value == ""){
+    console.log("vacio");
+    return true;
+  }
+  else {
+    console.log("tiene dato");
+    return false;
+  }
+}
  
 $(".button").click(function () {
   $("#svg_form_time rect").css("fill", active_color);
   $("#svg_form_time circle").css("fill", active_color);
   var id = $(this).attr("id");
-  if (id == "next") {
+  if (id == "next" && !validate()) {
     $("#prev").removeClass("disabled");
     if (child >= length) {
       $(this).addClass("disabled");
