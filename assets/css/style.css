@@ -1042,7 +1042,6 @@ ul {
 }
 
 .pageFormulario {
-  height: 99vh;
   width: 100%;
   background-image: url("..//img/fondoPared.jpg");
   background-position: center;
@@ -1090,7 +1089,7 @@ ul {
 .pageFormulario .disabled {
   display: none;
 }
-.pageFormulario > section {
+.pageFormulario section {
   padding: 50px;
   max-width: 600px;
   margin: 30px auto;
@@ -1100,13 +1099,14 @@ ul {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   transition: transform 0.2s ease-in-out;
+  /* Mark input boxes that gets an error on validation: */
 }
-.pageFormulario > section p {
+.pageFormulario section p {
   font-weight: bolder;
   text-align: justify;
   margin-top: 0;
 }
-.pageFormulario > section > input {
+.pageFormulario section > input {
   width: 100%;
   margin: 7px 0px;
   display: inline-block;
@@ -1119,7 +1119,11 @@ ul {
   background: white;
   outline: none;
 }
-.pageFormulario > section textarea {
+.pageFormulario section input.invalid {
+  background-color: #ffdddd;
+  color: red;
+}
+.pageFormulario section textarea {
   width: 100%;
   margin: 7px 0px;
   display: inline-block;
@@ -1132,45 +1136,49 @@ ul {
   background: white;
   outline: none;
 }
-.pageFormulario > section > .checkSexo {
+.pageFormulario section > .checkSexo {
   display: flex;
   align-items: center;
   margin: 10px;
 }
-.pageFormulario > section > .checkSexo > .titleSexo {
+.pageFormulario section > .checkSexo > .titleSexo {
   margin-right: 40px;
   font-weight: bold;
 }
-.pageFormulario > section > .checkSexo > h4 {
+.pageFormulario section > .checkSexo > h4 {
   font-weight: normal;
   margin: 0 10px;
 }
-.pageFormulario > section > .checkObjetivos {
+.pageFormulario section > .checkSexo > #error {
+  color: red;
+  margin-left: 50px;
+}
+.pageFormulario section > .checkObjetivos {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
-.pageFormulario > section > .checkObjetivos > .objetivos {
+.pageFormulario section > .checkObjetivos > .objetivos {
   display: flex;
   flex-flow: column wrap;
 }
-.pageFormulario > section > .checkObjetivos .cajaOpcionesPlan {
+.pageFormulario section > .checkObjetivos .cajaOpcionesPlan {
   display: flex;
   flex-wrap: wrap;
 }
-.pageFormulario > section .opcion {
+.pageFormulario section .opcion {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
-.pageFormulario > section .opcion > h4 {
+.pageFormulario section .opcion > h4 {
   font-weight: normal;
   margin: 0 15px;
 }
-.pageFormulario > section .tgl {
+.pageFormulario section .tgl {
   display: none;
 }
-.pageFormulario > section .tgl + .tgl-btn {
+.pageFormulario section .tgl + .tgl-btn {
   outline: 0;
   display: block;
   width: 2.5em;
@@ -1182,36 +1190,36 @@ ul {
   -ms-user-select: none;
   user-select: none;
 }
-.pageFormulario > section .tgl + .tgl-btn:after, .pageFormulario > section .tgl + .tgl-btn:before {
+.pageFormulario section .tgl + .tgl-btn:after, .pageFormulario section .tgl + .tgl-btn:before {
   position: relative;
   display: block;
   content: "";
   width: 50%;
   height: 100%;
 }
-.pageFormulario > section .tgl + .tgl-btn:after {
+.pageFormulario section .tgl + .tgl-btn:after {
   left: 0;
 }
-.pageFormulario > section .tgl + .tgl-btn:before {
+.pageFormulario section .tgl + .tgl-btn:before {
   display: none;
 }
-.pageFormulario > section .tgl-flat + .tgl-btn {
+.pageFormulario section .tgl-flat + .tgl-btn {
   padding: 2px;
   transition: all 0.2s ease;
   background: #fff;
   border: 3px solid #f2f2f2;
   border-radius: 2em;
 }
-.pageFormulario > section .tgl-flat + .tgl-btn:after {
+.pageFormulario section .tgl-flat + .tgl-btn:after {
   transition: all 0.2s ease;
   background: #f2f2f2;
   content: "";
   border-radius: 1em;
 }
-.pageFormulario > section .tgl-flat:checked + .tgl-btn {
+.pageFormulario section .tgl-flat:checked + .tgl-btn {
   border: 3px solid rgb(254, 97, 72);
 }
-.pageFormulario > section .tgl-flat:checked + .tgl-btn:after {
+.pageFormulario section .tgl-flat:checked + .tgl-btn:after {
   left: 50%;
   background: rgb(254, 97, 72);
 }

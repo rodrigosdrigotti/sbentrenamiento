@@ -9,6 +9,10 @@
     <link rel='stylesheet' href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- Sweet Alert Script -->
+    <script src="js/sweetalert.min.js"></script>
+    <!-- Sweet Alert Styles -->
+    <link href="css/sweetalert.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="">
 </head>
 <body>
@@ -30,56 +34,58 @@
         <h1>Completa el siguiente formulario <br> para anotarte en mis asesorías</h1>
         <p>La pre-inscripción será rápida, una vez envíes el formulario, <br> procesaré tus datos y me contactaré vía email para informarte cómo seguir.</p>
         <div id="svg_wrap"></div>
-            <section>
+        <form data-multi-step action="" method="post">
+            <section class="active" id="dp" data-step>
                 <p>Datos Personales</p>
                 <input type="text" id="name" placeholder="Nombre" required/>
-                <input type="text" placeholder="Apellido" required/>
-                <input type="email" placeholder="Email" required/>
-                <input type="text" onfocus="(this.type = 'date')" placeholder="Fecha de Nacimiento" required/>
-                <input type="text" placeholder="Usuario Instagram" required/>
-                <input type="tel" placeholder="Telefono" required/>
-                <input type="text" placeholder="Pais" required/>
-                <input type="text" placeholder="Provincia / Estado" required/>
+                <input type="text" placeholder="Apellido" oninput="this.className = ''" />
+                <input type="email" id="email" placeholder="Email" oninput="this.className = ''" />
+                <input type="text" onfocus="(this.type = 'date')" placeholder="Fecha de Nacimiento" />
+                <input type="text" placeholder="Usuario Instagram" />
+                <input type="number" placeholder="Telefono (Sin guiones)" />
+                <input type="text" placeholder="Pais" />
+                <input type="text" placeholder="Provincia / Estado" />
                 <div class="checkSexo">
                     <label class="titleSexo">Sexo:</label>
-                    <input class="tgl tgl-flat" id="sexoM" value="m" type="checkbox"/>
+                    <input class="tgl tgl-flat" name="sexo" id="sexoM" value="m" type="radio" required/>
                     <label class="tgl-btn" for="sexoM"></label>
                     <h4>Masculino</h4>
-                    <input class="tgl tgl-flat" id="sexoF" value="f" type="checkbox"/>
+                    <input class="tgl tgl-flat" name="sexo" id="sexoF" value="f" type="radio" required/>
                     <label class="tgl-btn" for="sexoF"></label>
                     <h4>Femenino</h4>
+                    <span id="error"></span>
                 </div>
             </section>
-
-            <section>
+            
+            <section id="fisico" data-step>
                 <p>Fisico</p>
                 <input type="number" placeholder="Edad" required/>
-                <input type="text" placeholder="Altura" required/>
-                <input type="text" placeholder="Peso" required/>
+                <input type="text" placeholder="Altura" />
+                <input type="text" placeholder="Peso" />
             </section>
 
-            <section>
+            <section data-step>
                 <div class="checkObjetivos">
                     <div class="objetivos">
                         <p>Objetivos</p>
                         <div class="cajaOpciones">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="gm" value="ganarmasa" type="checkbox"/>
+                                <input class="tgl tgl-flat" id="gm" value="ganarmasa" type="checkbox" required/>
                                 <label class="tgl-btn" for="gm"></label>
                                 <h4>Ganar masa muscular</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="pg" value="perdergrasa" type="checkbox"/>
+                                <input class="tgl tgl-flat" id="pg" value="perdergrasa" type="checkbox" />
                                 <label class="tgl-btn" for="pg"></label>
                                 <h4>Perder Grasa</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="rc" value="recomposición" type="checkbox"/>
+                                <input class="tgl tgl-flat" id="rc" value="recomposición" type="checkbox" />
                                 <label class="tgl-btn" for="rc"></label>
                                 <h4>Recomposición corporal</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="sr" value="saludRendimiento" type="checkbox"/>
+                                <input class="tgl tgl-flat" id="sr" value="saludRendimiento" type="checkbox" />
                                 <label class="tgl-btn" for="sr"></label>
                                 <h4>Sólo salud y rendimiento</h4>
                             </div>
@@ -89,12 +95,12 @@
                         <p>Plan Que Interesa</p>
                         <div class="cajaOpcionesPlan">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="p1" value="planMes" type="checkbox"/>
+                                <input class="tgl tgl-flat" name="plan" id="p1" value="planMes" type="radio" required/>
                                 <label class="tgl-btn" for="p1"></label>
                                 <h4>Plan 1 Mes</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="p3" value="plan3Meses" type="checkbox"/>
+                                <input class="tgl tgl-flat" name="plan" id="p3" value="plan3Meses" type="radio" required/>
                                 <label class="tgl-btn" for="p3"></label>
                                 <h4>Plan 3 Meses</h4>
                             </div>
@@ -103,12 +109,12 @@
                         <p>Forma De Pago</p>
                         <div class="cajaOpcionesPlan">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="mp" value="mercadoPago" type="checkbox"/>
+                                <input class="tgl tgl-flat" name="formaPago" id="mp" value="mercadoPago" type="radio" required/>
                                 <label class="tgl-btn" for="mp"></label>
                                 <h4>Mercado Pago</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="pp" value="paypal" type="checkbox"/>
+                                <input class="tgl tgl-flat" name="formaPago" id="pp" value="paypal" type="radio" required/>
                                 <label class="tgl-btn" for="pp"></label>
                                 <h4>PayPal</h4>
                             </div>
@@ -117,7 +123,7 @@
                 </div>
             </section>
 
-            <section>
+            <section data-step>
                 <p>¿En donde vas a entrenar?</p>
                 <div class="cajaOpcionesPlan">
                     <div class="opcion">
@@ -217,7 +223,7 @@
                 </div>
             </section>
 
-            <section>
+            <section data-step>
                 <p>¿Cuantas flexiones podés realizar con buena técnica?</p>
                 <div class="cajaOpciones">
                     <div class="opcion">
@@ -280,7 +286,8 @@
 
             <div class="button" id="prev">&larr; Previous</div>
             <div class="button" id="next">Next &rarr;</div>
-            <div class="button" id="submit">Agree and send application</div>
+            <button class="button" type="submit" id="submit">Enviar</button>
+        </form>
     </main>
     <footer id="sectionContacto" class="footer">
         <div class="info">

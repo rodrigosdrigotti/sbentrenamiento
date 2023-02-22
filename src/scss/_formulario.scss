@@ -1,5 +1,4 @@
 .pageFormulario {
-    height: 99vh;
     width: 100%;
     background-image: url("..//img/fondoPared.jpg");
     background-position: center;
@@ -46,7 +45,7 @@
     .disabled {
         display:none;
     }
-    > section {
+    section {
         padding: 50px;
         max-width: 600px;
         margin: 30px auto;
@@ -74,6 +73,11 @@
             background:white;
             outline: none;
         }
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+            color: red;
+        }
         textarea {
             width: 100%;
             margin: 7px 0px;
@@ -98,6 +102,10 @@
             > h4 {
                 font-weight: normal;
                 margin: 0 10px;
+            }
+            > #error {
+                color: red;
+                margin-left: 50px;
             }
         }
         > .checkObjetivos {
