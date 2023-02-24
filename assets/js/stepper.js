@@ -1,3 +1,5 @@
+
+
 $( document ).ready(function() {
   var base_color = "rgb(230,230,230)";
   var active_color = "rgba(254, 97, 72)";
@@ -141,7 +143,7 @@ $( document ).ready(function() {
   })
   currentStep = 0;
   
-  function validate(currentStep){
+  /* function validate(currentStep){
     let inputs = [...formSteps[currentStep].querySelectorAll("input")];
     let allValid = inputs.every(input => input.reportValidity());
     if(allValid){
@@ -150,12 +152,191 @@ $( document ).ready(function() {
     console.log(inputs.length)
     for(let i=0; i<inputs.length ; i++) {
       if(($('input[type=checkbox]:checked').length === 0)){
-        document.getElementById("error").innerHTML = "** DEBE SELECCIONAR UNO **";
-        setTimeout(()=>{ document.getElementById("error").innerHTML = "";},2000);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'DEBE SELECCIONAR UNO',
+          toast: true,
+          position: 'center',
+          confirmButtonColor: '#fe6148',
+        })
+        //document.getElementById("error").innerHTML = "** DEBE SELECCIONAR UNO **";
+        //setTimeout(()=>{ document.getElementById("error").innerHTML = "";},2000);
       }
     }
+  } */
+  function validate(currentStep){
+    let inputs = [...formSteps[currentStep].querySelectorAll("input")];
+    for(let i=0; i<inputs.length; i++){
+      if(inputs[i].value == ""){
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'COMPLETAR LOS DATOS',
+          toast: true,
+          position: 'center',
+          confirmButtonColor: '#fe6148',
+        })
+        inputs[i].className += " invalid";
+        return false;
+      }
+      if(inputs[i].type == "email"){
+        let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!inputs[i].value.match(validRegex)) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'FORMATO DE EMAIL INCORRECTO',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        }
+      }
+      if(inputs[i].name == "sexo"){
+        let valorSexo = document.querySelectorAll('input[name="sexo"]:checked').length;
+        if(valorSexo === 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR SEXO',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "plan"){
+        let plan = document.querySelectorAll('input[name="plan"]:checked').length;
+        if(plan === 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UN PLAN',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "formaPago"){
+        let formaPago = document.querySelectorAll('input[name="formaPago"]:checked').length;
+        if(formaPago === 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UNA FORMA DE PAGO',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "objetivos"){
+        valorActivo = document.querySelectorAll('input[name="objetivos"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR LOS OBJETIVOS',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "lugar"){
+        valorActivo = document.querySelectorAll('input[name="lugar"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR LOS LUGARES',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "materiales"){
+        valorActivo = document.querySelectorAll('input[name="materiales"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR LOS MATERIALES',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "nivelActividad"){
+        valorActivo = document.querySelectorAll('input[name="nivelActividad"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UN NIVEL DE ACTIVIDAD',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "nivelEntrenamiento"){
+        valorActivo = document.querySelectorAll('input[name="nivelEntrenamiento"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UN NIVEL DE ENTRENAMIENTO',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "nivelFlexiones"){
+        valorActivo = document.querySelectorAll('input[name="nivelFlexiones"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UN NIVEL DE FLEXIONES',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+      if(inputs[i].name == "nivelDominadas"){
+        valorActivo = document.querySelectorAll('input[name="nivelDominadas"]:checked').length;
+        if(valorActivo <= 0){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'DEBE SELECCIONAR UN NIVEL DE DOMINADAS',
+            toast: true,
+            position: 'center',
+            confirmButtonColor: '#fe6148',
+          })
+          return false;
+        } 
+      }
+    }
+    return true;
   }
-  
   $(".button").click(function () {
     $("#svg_form_time rect").css("fill", active_color);
     $("#svg_form_time circle").css("fill", active_color);

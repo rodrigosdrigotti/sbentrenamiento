@@ -9,10 +9,6 @@
     <link rel='stylesheet' href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <!-- Sweet Alert Script -->
-    <script src="js/sweetalert.min.js"></script>
-    <!-- Sweet Alert Styles -->
-    <link href="css/sweetalert.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="">
 </head>
 <body>
@@ -47,10 +43,10 @@
                 <input type="text" placeholder="Provincia / Estado" />
                 <div class="checkSexo">
                     <label class="titleSexo">Sexo:</label>
-                    <input class="tgl tgl-flat" name="sexo" id="sexoM" value="m" type="radio" required/>
+                    <input class="tgl tgl-flat" name="sexo" id="sexoM" value="m" type="radio" />
                     <label class="tgl-btn" for="sexoM"></label>
                     <h4>Masculino</h4>
-                    <input class="tgl tgl-flat" name="sexo" id="sexoF" value="f" type="radio" required/>
+                    <input class="tgl tgl-flat" name="sexo" id="sexoF" value="f" type="radio" />
                     <label class="tgl-btn" for="sexoF"></label>
                     <h4>Femenino</h4>
                     <span id="error"></span>
@@ -70,22 +66,22 @@
                         <p>Objetivos</p>
                         <div class="cajaOpciones">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="gm" value="ganarmasa" type="checkbox" required/>
+                                <input class="tgl tgl-flat" name="objetivos" id="gm" value="ganarmasa" type="checkbox" />
                                 <label class="tgl-btn" for="gm"></label>
                                 <h4>Ganar masa muscular</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="pg" value="perdergrasa" type="checkbox" />
+                                <input class="tgl tgl-flat" name="objetivos" id="pg" value="perdergrasa" type="checkbox" />
                                 <label class="tgl-btn" for="pg"></label>
                                 <h4>Perder Grasa</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="rc" value="recomposición" type="checkbox" />
+                                <input class="tgl tgl-flat" name="objetivos" id="rc" value="recomposición" type="checkbox" />
                                 <label class="tgl-btn" for="rc"></label>
                                 <h4>Recomposición corporal</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" id="sr" value="saludRendimiento" type="checkbox" />
+                                <input class="tgl tgl-flat" name="objetivos" id="sr" value="saludRendimiento" type="checkbox" />
                                 <label class="tgl-btn" for="sr"></label>
                                 <h4>Sólo salud y rendimiento</h4>
                             </div>
@@ -95,12 +91,12 @@
                         <p>Plan Que Interesa</p>
                         <div class="cajaOpcionesPlan">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" name="plan" id="p1" value="planMes" type="radio" required/>
+                                <input class="tgl tgl-flat" name="plan" id="p1" value="planMes" type="radio" />
                                 <label class="tgl-btn" for="p1"></label>
                                 <h4>Plan 1 Mes</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" name="plan" id="p3" value="plan3Meses" type="radio" required/>
+                                <input class="tgl tgl-flat" name="plan" id="p3" value="plan3Meses" type="radio" />
                                 <label class="tgl-btn" for="p3"></label>
                                 <h4>Plan 3 Meses</h4>
                             </div>
@@ -109,12 +105,12 @@
                         <p>Forma De Pago</p>
                         <div class="cajaOpcionesPlan">
                             <div class="opcion">
-                                <input class="tgl tgl-flat" name="formaPago" id="mp" value="mercadoPago" type="radio" required/>
+                                <input class="tgl tgl-flat" name="formaPago" id="mp" value="mercadoPago" type="radio" />
                                 <label class="tgl-btn" for="mp"></label>
                                 <h4>Mercado Pago</h4>
                             </div>
                             <div class="opcion">
-                                <input class="tgl tgl-flat" name="formaPago" id="pp" value="paypal" type="radio" required/>
+                                <input class="tgl tgl-flat" name="formaPago" id="pp" value="paypal" type="radio" />
                                 <label class="tgl-btn" for="pp"></label>
                                 <h4>PayPal</h4>
                             </div>
@@ -124,163 +120,167 @@
             </section>
 
             <section data-step>
-                <p>¿En donde vas a entrenar?</p>
-                <div class="cajaOpcionesPlan">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="casa" value="casa" type="checkbox"/>
-                        <label class="tgl-btn" for="casa"></label>
-                        <h4>Casa</h4>
+                <div class="datosNivelParteA">
+                    <p>¿En donde vas a entrenar?</p>
+                    <div class="cajaOpcionesPlan">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="lugar" id="casa" value="casa" type="checkbox"/>
+                            <label class="tgl-btn" for="casa"></label>
+                            <h4>Casa</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="lugar" id="parqueCalistenia" value="parqueCalistenia" type="checkbox"/>
+                            <label class="tgl-btn" for="parqueCalistenia"></label>
+                            <h4>Parque Calistenia</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="lugar" id="gym" value="gym" type="checkbox"/>
+                            <label class="tgl-btn" for="gym"></label>
+                            <h4>Gimnasio</h4>
+                        </div>
                     </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="parqueCalistenia" value="parqueCalistenia" type="checkbox"/>
-                        <label class="tgl-btn" for="parqueCalistenia"></label>
-                        <h4>Parque Calistenia</h4>
+                    <p>¿Si entrenas en casa, con qué materiales contas?</p>
+                    <div class="cajaOpciones">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="parelelas" value="parelelas" type="checkbox"/>
+                            <label class="tgl-btn" for="parelelas"></label>
+                            <h4>Paralelas altas/bajas</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="barraDominadas" value="barraDominadas" type="checkbox"/>
+                            <label class="tgl-btn" for="barraDominadas"></label>
+                            <h4>Barra de dominadas</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="bandaResistencia" value="bandaResistencia" type="checkbox"/>
+                            <label class="tgl-btn" for="bandaResistencia"></label>
+                            <h4>Banda de resistencia</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="pesasRusas" value="pesasRusas" type="checkbox"/>
+                            <label class="tgl-btn" for="pesasRusas"></label>
+                            <h4>Pesas rusas</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="mancuernas" value="mancuernas" type="checkbox"/>
+                            <label class="tgl-btn" for="mancuernas"></label>
+                            <h4>Mancuernas</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="materiales" id="barraDiscos" value="barraDiscos" type="checkbox"/>
+                            <label class="tgl-btn" for="barraDiscos"></label>
+                            <h4>Barras con Discos</h4>
+                        </div>
                     </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="gym" value="gym" type="checkbox"/>
-                        <label class="tgl-btn" for="gym"></label>
-                        <h4>Gimnasio</h4>
+                    <p>Nivel de Actividad Diaria</p>
+                    <div class="cajaOpciones">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelActividad" id="ceroEjercicio" value="ceroEjercicio" type="radio"/>
+                            <label class="tgl-btn" for="ceroEjercicio"></label>
+                            <h4>Ningún ejercicio (no realizo nada de ejercicio)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelActividad" id="pocoActivo" value="pocoActivo" type="radio"/>
+                            <label class="tgl-btn" for="pocoActivo"></label>
+                            <h4>Poco activo (realiza ejercicios de baja intensidad 1 a 3 veces por semana)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelActividad" id="activo" value="activo" type="radio"/>
+                            <label class="tgl-btn" for="activo"></label>
+                            <h4>Activo (entrenamientos de 3 a 5 veces por semana)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelActividad" id="muyActivo" value="muyActivo" type="radio"/>
+                            <label class="tgl-btn" for="muyActivo"></label>
+                            <h4>Muy activo (entrenamiento de 5 a 7 veces y actividad física el resto del día)</h4>
+                        </div>
                     </div>
-                </div>
-                <p>¿Si entrenas en casa, con qué materiales contas?</p>
-                <div class="cajaOpciones">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="parelelas" value="parelelas" type="checkbox"/>
-                        <label class="tgl-btn" for="parelelas"></label>
-                        <h4>Paralelas altas/bajas</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="barraDominadas" value="barraDominadas" type="checkbox"/>
-                        <label class="tgl-btn" for="barraDominadas"></label>
-                        <h4>Barra de dominadas</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="bandaResistencia" value="bandaResistencia" type="checkbox"/>
-                        <label class="tgl-btn" for="bandaResistencia"></label>
-                        <h4>Banda de resistencia</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="pesasRusas" value="pesasRusas" type="checkbox"/>
-                        <label class="tgl-btn" for="pesasRusas"></label>
-                        <h4>Pesas rusas</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="mancuernas" value="mancuernas" type="checkbox"/>
-                        <label class="tgl-btn" for="mancuernas"></label>
-                        <h4>Mancuernas</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="barraDiscos" value="barraDiscos" type="checkbox"/>
-                        <label class="tgl-btn" for="barraDiscos"></label>
-                        <h4>Barras con Discos</h4>
-                    </div>
-                </div>
-                <p>Nivel de Actividad Diaria</p>
-                <div class="cajaOpciones">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="ceroEjercicio" value="ceroEjercicio" type="checkbox"/>
-                        <label class="tgl-btn" for="ceroEjercicio"></label>
-                        <h4>Ningún ejercicio (no realizo nada de ejercicio)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="pocoActivo" value="pocoActivo" type="checkbox"/>
-                        <label class="tgl-btn" for="pocoActivo"></label>
-                        <h4>Poco activo (realiza ejercicios de baja intensidad 1 a 3 veces por semana)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="activo" value="activo" type="checkbox"/>
-                        <label class="tgl-btn" for="activo"></label>
-                        <h4>Activo (entrenamientos de 3 a 5 veces por semana)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="muyActivo" value="muyActivo" type="checkbox"/>
-                        <label class="tgl-btn" for="muyActivo"></label>
-                        <h4>Muy activo (entrenamiento de 5 a 7 veces y actividad física el resto del día)</h4>
-                    </div>
-                </div>
-                <p>Nivel de Entrenamiento</p>
-                <div class="cajaOpciones">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="inicial" value="inicial" type="checkbox"/>
-                        <label class="tgl-btn" for="inicial"></label>
-                        <h4>Inicial (1 mes de entrenamiento)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="principiante" value="principiante" type="checkbox"/>
-                        <label class="tgl-btn" for="principiante"></label>
-                        <h4>Principiante (1 mes – 8 meses de entrenamiento)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="intermedio" value="intermedio" type="checkbox"/>
-                        <label class="tgl-btn" for="intermedio"></label>
-                        <h4>Intermedio (8 meses-2 años de entrenamiento)</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="avanzado" value="avanzado" type="checkbox"/>
-                        <label class="tgl-btn" for="avanzado"></label>
-                        <h4>Avanzado (+ de 2 años de entrenamiento)</h4>
+                    <p>Nivel de Entrenamiento</p>
+                    <div class="cajaOpciones">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelEntrenamiento" id="inicial" value="inicial" type="radio"/>
+                            <label class="tgl-btn" for="inicial"></label>
+                            <h4>Inicial (1 mes de entrenamiento)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelEntrenamiento" id="principiante" value="principiante" type="radio"/>
+                            <label class="tgl-btn" for="principiante"></label>
+                            <h4>Principiante (1 mes – 8 meses de entrenamiento)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelEntrenamiento" id="intermedio" value="intermedio" type="radio"/>
+                            <label class="tgl-btn" for="intermedio"></label>
+                            <h4>Intermedio (8 meses-2 años de entrenamiento)</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelEntrenamiento" id="avanzado" value="avanzado" type="radio"/>
+                            <label class="tgl-btn" for="avanzado"></label>
+                            <h4>Avanzado (+ de 2 años de entrenamiento)</h4>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section data-step>
-                <p>¿Cuantas flexiones podés realizar con buena técnica?</p>
-                <div class="cajaOpciones">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="flexCeroCinco" value="flexCeroCinco" type="checkbox"/>
-                        <label class="tgl-btn" for="flexCeroCinco"></label>
-                        <h4>0-5</h4>
+                <div class="datosNivelParteB">
+                    <p>¿Cuantas flexiones podés realizar con buena técnica?</p>
+                    <div class="cajaOpciones">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelFlexiones" id="flexCeroCinco" value="flexCeroCinco" type="radio"/>
+                            <label class="tgl-btn" for="flexCeroCinco"></label>
+                            <h4>0-5</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelFlexiones" id="flexCincoDiez" value="flexCincoDiez" type="radio"/>
+                            <label class="tgl-btn" for="flexCincoDiez"></label>
+                            <h4>5-10</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelFlexiones" id="flexDiezQuince" value="flexDiezQuince" type="radio"/>
+                            <label class="tgl-btn" for="flexDiezQuince"></label>
+                            <h4>10-15</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelFlexiones" id="flexQuinceTreinta" value="flexQquinceTreinta" type="radio"/>
+                            <label class="tgl-btn" for="flexQuinceTreinta"></label>
+                            <h4>15-30</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelFlexiones" id="flexMasTreinta" value="flexMasTreinta" type="radio"/>
+                            <label class="tgl-btn" for="flexMasTreinta"></label>
+                            <h4>+30</h4>
+                        </div>
                     </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="flexCincoDiez" value="flexCincoDiez" type="checkbox"/>
-                        <label class="tgl-btn" for="flexCincoDiez"></label>
-                        <h4>5-10</h4>
+                    <p>¿Cuantas dominadas podés realizar con buena técnica?</p>
+                    <div class="cajaOpciones">
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelDominadas" id="domCeroCinco" value="domCeroCinco" type="radio"/>
+                            <label class="tgl-btn" for="domCeroCinco"></label>
+                            <h4>0-5</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelDominadas" id="domCincoDiez" value="domCincoDiez" type="radio"/>
+                            <label class="tgl-btn" for="domCincoDiez"></label>
+                            <h4>5-10</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelDominadas" id="domDiezQuince" value="domDiezQuince" type="radio"/>
+                            <label class="tgl-btn" for="domDiezQuince"></label>
+                            <h4>10-15</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelDominadas" id="domQuinceVeinte" value="domQuinceVeinte" type="radio"/>
+                            <label class="tgl-btn" for="domQuinceVeinte"></label>
+                            <h4>15-20</h4>
+                        </div>
+                        <div class="opcion">
+                            <input class="tgl tgl-flat" name="nivelDominadas" id="domMasVeinte" value="domMasVeinte" type="radio"/>
+                            <label class="tgl-btn" for="domMasVeinte"></label>
+                            <h4>+25</h4>
+                        </div>
+                        <p>¿Algo que debamos tener en cuenta sobre vos? (Así podemos brindarte lo mejor en tus entrenamientos)</p>
+                        <textarea type="text" id="datosExtra" rows="5"></textarea>
                     </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="flexDiezQuince" value="flexDiezQuince" type="checkbox"/>
-                        <label class="tgl-btn" for="flexDiezQuince"></label>
-                        <h4>10-15</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="flexQuinceTreinta" value="flexQquinceTreinta" type="checkbox"/>
-                        <label class="tgl-btn" for="flexQuinceTreinta"></label>
-                        <h4>15-30</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="flexMasTreinta" value="flexMasTreinta" type="checkbox"/>
-                        <label class="tgl-btn" for="flexMasTreinta"></label>
-                        <h4>+30</h4>
-                    </div>
-                </div>
-                <p>¿Cuantas dominadas podés realizar con buena técnica?</p>
-                <div class="cajaOpciones">
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="domCeroCinco" value="domCeroCinco" type="checkbox"/>
-                        <label class="tgl-btn" for="domCeroCinco"></label>
-                        <h4>0-5</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="domCincoDiez" value="domCincoDiez" type="checkbox"/>
-                        <label class="tgl-btn" for="domCincoDiez"></label>
-                        <h4>5-10</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="domDiezQuince" value="domDiezQuince" type="checkbox"/>
-                        <label class="tgl-btn" for="domDiezQuince"></label>
-                        <h4>10-15</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="domQuinceVeinte" value="domQuinceVeinte" type="checkbox"/>
-                        <label class="tgl-btn" for="domQuinceVeinte"></label>
-                        <h4>15-20</h4>
-                    </div>
-                    <div class="opcion">
-                        <input class="tgl tgl-flat" id="domMasVeinte" value="domMasVeinte" type="checkbox"/>
-                        <label class="tgl-btn" for="domMasVeinte"></label>
-                        <h4>+25</h4>
-                    </div>
-                    <p>¿Algo que debamos tener en cuenta sobre vos? (Así podemos brindarte lo mejor en tus entrenamientos)</p>
-                    <textarea type="text" id="datosExtra" rows="5"></textarea>
                 </div>
             </section>
 
@@ -313,6 +313,7 @@
             </form>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="../js/stepper.js"></script>
 </body>
 </html>
