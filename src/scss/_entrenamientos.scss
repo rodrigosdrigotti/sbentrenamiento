@@ -3,14 +3,14 @@
     height: 500px;
     display: flex;
     text-align: center;
-    @media (max-width: 350px) {
+    @media (max-width: 490px) {
         flex-direction: column;
     }
     > .entrenamiento {
         width: 50%;
         height: 100%;
         position: relative;
-        @media (max-width: 350px) {
+        @media (max-width: 490px) {
             width: 100%;
         }
         &:hover h2 {

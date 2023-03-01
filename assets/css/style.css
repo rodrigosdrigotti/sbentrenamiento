@@ -317,7 +317,7 @@ ul {
   display: flex;
   text-align: center;
 }
-@media (max-width: 350px) {
+@media (max-width: 490px) {
   .entrenamientos {
     flex-direction: column;
   }
@@ -327,7 +327,7 @@ ul {
   height: 100%;
   position: relative;
 }
-@media (max-width: 350px) {
+@media (max-width: 490px) {
   .entrenamientos > .entrenamiento {
     width: 100%;
   }
