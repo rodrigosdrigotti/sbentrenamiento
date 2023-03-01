@@ -190,6 +190,22 @@ ul {
     margin: 10px 0 0 0;
   }
 }
+.header > .barraMenu > .nav .menu-form {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .header > .barraMenu > .nav .menu-form {
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 20px;
+  }
+}
 
 .BG-index {
   height: 99vh;
@@ -317,7 +333,7 @@ ul {
   display: flex;
   text-align: center;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .entrenamientos {
     flex-direction: column;
   }
@@ -327,9 +343,10 @@ ul {
   height: 100%;
   position: relative;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .entrenamientos > .entrenamiento {
     width: 100%;
+    position: static;
   }
 }
 .entrenamientos > .entrenamiento:hover h2 {
@@ -1145,12 +1162,25 @@ ul {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+@media (max-width: 350px) {
+  .pageFormulario > h1 {
+    font-size: 28px;
+    padding: 40px 40px 0 40px;
+  }
+}
 .pageFormulario > p {
   text-align: center;
   font-size: 36px;
   color: #FFF;
   margin-top: 50px;
   letter-spacing: 1px;
+}
+@media (max-width: 350px) {
+  .pageFormulario > p {
+    padding: 0 40px;
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }
 .pageFormulario #svg_form_time {
   height: 15px;
@@ -1168,6 +1198,7 @@ ul {
   padding: 15px 25px;
   display: inline-block;
   margin: 10px;
+  margin-bottom: 50px;
   font-weight: bold;
   color: black;
   cursor: pointer;
@@ -1276,6 +1307,12 @@ ul {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media (max-width: 350px) {
+  .pageFormulario section .tgl + .tgl-btn {
+    width: 0.5em;
+    height: 0.5em;
+  }
 }
 .pageFormulario section .tgl + .tgl-btn:after, .pageFormulario section .tgl + .tgl-btn:before {
   position: relative;

@@ -13,6 +13,10 @@
         padding-top: 70px;
         letter-spacing: 4px;
         text-transform: uppercase;
+        @media (max-width: 350px) {
+            font-size: 28px;
+            padding: 40px 40px 0 40px;
+        }
     }
     > p {
         text-align: center;
@@ -20,6 +24,11 @@
         color: #FFF;
         margin-top: 50px;
         letter-spacing: 1px;
+        @media (max-width: 350px) {
+            padding: 0 40px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
     }
     #svg_form_time {
         height: 15px;
@@ -37,6 +46,7 @@
         padding: 15px 25px;
         display: inline-block;
         margin: 10px;
+        margin-bottom: 50px;
         font-weight: bold;
         color: black;
         cursor: pointer;
@@ -144,6 +154,10 @@
                -moz-user-select: none;
                 -ms-user-select: none;
                     user-select: none;
+            @media (max-width: 350px) {
+                width: 0.5em;
+                height: 0.5em;
+            }
         }
         .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
             position: relative;
