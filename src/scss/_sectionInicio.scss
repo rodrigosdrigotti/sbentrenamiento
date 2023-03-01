@@ -12,6 +12,9 @@
     flex-direction: column;
     color: #FFF;
     z-index: -1;
+    @media (max-width: 768px) {
+        background-position: 60% center;
+    }
     @media (max-width: 350px) {
         background-position: 65% center;
     }
@@ -21,6 +24,9 @@
         letter-spacing: 1px;
         font-size: 42px;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-left: 60px;
+        }
         @media (max-width: 350px) {
             margin-left: 30px;
             font-size: 18px;
@@ -29,6 +35,11 @@
     > h2 {
         margin-left: 100px;
         font-size: 114px;
+        @media (max-width: 768px) {
+            margin-left: 60px;
+            width: 70%;
+            line-height: 120px;
+        }
         @media (max-width: 350px) {
             margin-left: 30px;
             font-size: 74px;
@@ -41,6 +52,10 @@
         letter-spacing: 1px;
         font-size: 22px;
         margin-bottom: 20px;
+        @media (max-width: 768px) {
+            margin-left: 60px;
+            width: 45%;
+        }
         @media (max-width: 350px) {
             margin-left: 30px;
             font-size: 15px;
@@ -62,6 +77,9 @@
             font-size: 20px;
             letter-spacing: 1px;
             cursor: pointer;
+            @media (max-width: 768px) {
+                margin-left: 60px;
+            }
             @media (max-width: 350px) {
                 margin-left: 30px;
                 font-size: 14px;

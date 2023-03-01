@@ -18,17 +18,28 @@
         align-items: center;
         flex-direction: column;
         font-size: 26px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 55px;
+        }
         @media (max-width: 350px) {
             width: 100%;
             margin-top: 40px;
         }
         > h4 {
             font-size: 44px;
+            @media (max-width: 768px) {
+                font-size: 54px;
+            }
             @media (max-width: 350px) {
                 font-size: 34px;
             }
         }
         > p {
+            @media (max-width: 768px) {
+                margin-top: -10px;
+                font-size: 36px;
+                }
             @media (max-width: 350px) {
                 margin-top: -10px;
                 font-size: 20px;
@@ -43,6 +54,10 @@
             justify-content: space-evenly;
             padding: 4px;
             cursor: pointer;
+            @media (max-width: 768px) {
+                margin-top: -10px;
+                font-size: 40px;
+            }
             @media (max-width: 350px) {
                 margin-top: -10px;
                 font-size: 24px;
@@ -52,6 +67,13 @@
     > .contacto {
         width: 50%;
         margin-top: 70px;
+        @media (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+        }
         @media (max-width: 350px) {
             width: 80%;
             display: flex;
@@ -62,6 +84,9 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            @media (max-width: 768px) {
+                width: 500px;
+            }
             > input {
                 height: 40px;
                 background: none;
@@ -70,6 +95,9 @@
                 font-size: 22px;
                 font-family: 'Sofia Sans Extra Condensed'; 
                 outline: none; 
+                @media (max-width: 768px) {
+                    font-size: 26px;
+                }
                 @media (max-width: 350px) {
                     font-size: 16px;
                 }
@@ -85,6 +113,9 @@
                 font-size: 22px;
                 font-family: 'Sofia Sans Extra Condensed'; 
                 outline: none;  
+                @media (max-width: 768px) {
+                    font-size: 26px;
+                }
                 @media (max-width: 350px) {
                     font-size: 16px;
                 }
@@ -102,6 +133,11 @@
                 font-size: 22px;
                 font-family: 'Sofia Sans Extra Condensed';  
                 cursor: pointer;
+                @media (max-width: 768px) {
+                    width: 180px;
+                    height: 55px;
+                    font-size: 26px;
+                }
                 @media (max-width: 350px) {
                     height: 35px;
                     width: 100px;

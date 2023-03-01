@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Sofia Sans Extra Condensed';  
-    background-color: #858585;
+    background-color: #000000;
 }
 .faqs {
     display: flex;
@@ -40,6 +40,22 @@ body {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .faqs {
+        padding: 50px 90px;
+    }
+    .faqs h2 {
+        font-size: 52px;
+    }
+    .faqs h4 {
+        font-size: 32px;
+    }
+    .faqs p {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
 }
 
 @media (max-width: 350px) {

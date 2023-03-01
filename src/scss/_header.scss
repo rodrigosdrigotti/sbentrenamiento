@@ -122,6 +122,10 @@
                         font-size: 20px;
                         text-transform: uppercase;
                         margin: 15px;
+                        @media (max-width: 768px) {
+                            font-size: 30px;
+                            margin: 25px;
+                        }
                         &:hover {
                             color: rgba(254, 97, 72, 0.9);
                         }
@@ -151,6 +155,8 @@
                         letter-spacing: 1px;
                         cursor: pointer;
                         @media (max-width: 768px) {
+                            font-size: 26px;
+                            width: 150px;
                             margin: 10px 0 0 0;
                         }
                     }     
@@ -167,7 +173,13 @@
                 @media (max-width: 768px) {
                     flex-direction: column;
                     height: 100vh;
-                    margin-top: 20px;
+                }
+                .btn {
+                    @media (max-width: 768px) {
+                        font-size: 26px;
+                        width: 150px;
+                        margin: 70px 0 0 0;
+                    }
                 }
             }
         }

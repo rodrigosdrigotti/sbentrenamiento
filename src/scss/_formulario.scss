@@ -13,6 +13,9 @@
         padding-top: 70px;
         letter-spacing: 4px;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 46px;
+        }
         @media (max-width: 350px) {
             font-size: 28px;
             padding: 40px 40px 0 40px;
@@ -24,6 +27,10 @@
         color: #FFF;
         margin-top: 50px;
         letter-spacing: 1px;
+        @media (max-width: 768px) {
+            font-size: 28px;
+            padding: 0 100px;
+        }
         @media (max-width: 350px) {
             padding: 0 40px;
             font-size: 20px;
