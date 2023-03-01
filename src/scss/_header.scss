@@ -12,9 +12,16 @@
         justify-content: space-between;
         padding: 0 50px;
     }
+    @media (max-width: 350px) {
+        height: 120px;
+        padding: 0 25px;
+    }
     > .logo {
         width: 105px;
         padding: 10px;
+        @media (max-width: 350px) {
+            width: 80px;
+        }
         img {
             height: 100%;
             width: 100%;
@@ -93,7 +100,7 @@
                 margin-top: 100px;
                 max-height: 0;
                 transition: max-height .5s ease-out;
-            }
+            }            
             > .menu {
                 display: flex;
                 align-items: center;

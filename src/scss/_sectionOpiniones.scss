@@ -6,15 +6,16 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 100px;
-    @media (max-width: 570px) {
+    @media (max-width: 350px) {
         height: auto;
     }
     > h5 {
         color: #FFF;
         font-size: 44px;
         margin: 30px;
-        @media (max-width: 570px) {
+        @media (max-width: 350px) {
             font-size: 36px;
+            margin: 20px;
         }
     }
     > .cards {
@@ -33,11 +34,11 @@
             border-radius: 50px;
             color: #FFF;
             padding: 20px 25px;
-            @media (max-width: 570px) {
-                height: 200px;
-                width: 70%;
-                padding: 15px 20px;
-                margin: 10px 0;
+            @media (max-width: 350px) {
+                height: 220px;
+                width: 300px;
+                padding: 15px 0px;
+                margin: 10px 10px;
             }
             > p {
                 font-size: 18px;
@@ -45,8 +46,10 @@
                 text-align: center;
                 margin-top: 15px;
                 color: #FFF;
-                @media (max-width: 570px) {
-                    font-size: 14px;
+                @media (max-width: 350px) {
+                    margin-top: 20px;
+                    font-size: 13.5px;
+                    width: 85%;
                 }
             }
             > .estrellas {
@@ -54,17 +57,21 @@
                 margin: 20px;
                 gap: 5px;
                 color: #ffd901;
-                @media (max-width: 570px) {
+                @media (max-width: 350px) {
                     margin: 10px;
+                    font-size: 14px;
                 }
             }
             > .caja-avatar {
                 display: flex;
                 align-items: center;
                 gap: 30px;
+                @media (max-width: 350px) {
+                    margin-bottom: 20px;
+                }
                 > .avatar {
-                    width: 65px;
-                    height: 65px;
+                    width: 60px;
+                    height: 60px;
                     box-sizing: border-box;
                     border: 4px rgba(255, 255, 255, 0.3) solid;
                     border-radius: 50%;
@@ -84,16 +91,16 @@
                         font-size: 30px;
                         letter-spacing: 2px;
                         margin-bottom: -15px;
-                        @media (max-width: 570px) {
-                            font-size: 20px;
+                        @media (max-width: 350px) {
+                            font-size: 18px;
                         }
                     }
                     > p {
-                        font-size: 18px;
+                        font-size: 16px;
                         letter-spacing: 1px;
                         margin-top: 15px;
                         color: #FFF;
-                        @media (max-width: 570px) {
+                        @media (max-width: 350px) {
                             font-size: 14px;
                         }
                     }

@@ -9,28 +9,27 @@
     flex-direction: column;
     color: #FFF;
     z-index: -1;
-    @media (max-width: 570px) {
-        background-position: right center;
-        margin-top: 350px;
+    @media (max-width: 350px) {
+        background-position: 80% center;
     }
     > h2{
         margin: 50px 0 40px 100px;
         font-size: 94px;
         letter-spacing: 1px;
-        @media (max-width: 570px) {
-            font-size: 42px;
-            margin: 50px 0 40px 70px;
+        @media (max-width: 350px) {
+            font-size: 40px;
+            margin: 50px 0 40px 30px;
         }
     }
     > p{
         width: 650px;
-        margin-left: 100px;
+        margin-left: 100px; 
         font-size: 30px;
         letter-spacing: 1px;
-        @media (max-width: 570px) {
-            margin-left: 70px;
-            font-size: 20px;
-            width: 80%;
+        @media (max-width: 350px) {
+            margin-left: 30px;
+            font-size: 16px;
+            width: 65%;
         }
     }
     > .transformacion {
@@ -42,14 +41,17 @@
         align-items: center;
         margin-top: 100px;
         padding: 50px 0 150px 0;
+        @media (max-width: 350px) {
+            padding: 50px 0 100px 0;
+        }
         > h3 {
             margin: 70px 0 40px 0;
             font-size: 64px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            @media (max-width: 570px) {
+            @media (max-width: 350px) {
                 margin: 50px 0 20px 0;
-                font-size: 34px; 
+                font-size: 26px; 
             }
         }
         > .antesDespues {
@@ -61,7 +63,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                @media (max-width: 570px) {
+                @media (max-width: 350px) {
                     gap: 10px;
                 }
                 > h4 {
@@ -69,8 +71,8 @@
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     margin-bottom: 20px;
-                    @media (max-width: 570px) {
-                        font-size: 24px;
+                    @media (max-width: 350px) {
+                        font-size: 20px;
                     }
                 }
                 img {
@@ -93,7 +95,7 @@
                     transition: .4s;
                     cursor: pointer;
                     margin: 15px;
-                    @media (max-width: 570px) {
+                    @media (max-width: 350px) {
                         width: 100%;
                         padding: 0;
                         --w: 400px; /* width of the image */
@@ -104,7 +106,7 @@
                         outline: var(--b) solid var(--c);
                         outline-offset: calc(var(--s)/-2);
                         --_i: calc(100% - 2*var(--s));
-                        @media (max-width: 570px) {
+                        @media (max-width: 350px) {
                             outline: none;
                             outline-offset: none;
                         }

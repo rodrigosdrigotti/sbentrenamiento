@@ -15,14 +15,14 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
-        @media (max-width: 570px) {
+        @media (max-width: 350px) {
             background-position: center center;
         }
         > .secciones-info {
             text-align: center;
             color: #FFF;  
             width: 70%;  
-            @media (max-width: 570px) {
+            @media (max-width: 350px) {
                 width: 80%;
             }
             > h6 {
@@ -30,8 +30,8 @@
                 margin: 60px 0 10px 0;
                 letter-spacing: 5px;
                 color: rgba(254, 97, 72, 1);
-                @media (max-width: 570px) {
-                    font-size: 48px;
+                @media (max-width: 350px) {
+                    font-size: 40px;
                 }
             }
             > h5 {
@@ -39,15 +39,16 @@
                 margin: 10px 0 30px 0;
                 letter-spacing: 5px;
                 color: rgba(254, 97, 72, 1);
-                @media (max-width: 570px) {
-                    font-size: 24px;
+                @media (max-width: 350px) {
+                    font-size: 20px;
+                    letter-spacing: 3px;
                 }
             }
             > p {
                 font-size: 36px;
                 letter-spacing: 1px;
-                @media (max-width: 570px) {
-                    font-size: 20px;
+                @media (max-width: 350px) {
+                    font-size: 18px;
                 }
             }
         }
@@ -70,9 +71,10 @@
             border-radius: 15px;
             margin: 50px 25px;
             transition: 0.5s;
-            @media (max-width: 570px) {
-                width: 450px;
+            @media (max-width: 350px) {
+                width: 300px;
                 height: 350px;
+                margin: 50px 25px 0px;
             }
             > .caja {
                 position: absolute;
@@ -104,8 +106,9 @@
                         font-size: 114px;
                         margin-bottom: 30px;
                         color: rgba(255, 255, 255, 0.3);
-                        @media (max-width: 570px) {
-                            font-size: 104px;
+                        @media (max-width: 350px) {
+                            font-size: 84px;
+                            margin-bottom: 10px;
                         }
                     }
                     > h3 {
@@ -115,7 +118,7 @@
                         z-index: 1;
                         transition: 0.5s;
                         margin-bottom: 15px;
-                        @media (max-width: 570px) {
+                        @media (max-width: 350px) {
                             font-size: 28px;
                         }
                     }
@@ -127,8 +130,8 @@
                         color: rgba(255, 255, 255, 0.9);
                         z-index: 1;
                         transition: 0.5s;
-                        @media (max-width: 570px) {
-                            font-size: 18px;
+                        @media (max-width: 350px) {
+                            font-size: 17px;
                         }
                     } 
                 }
@@ -144,6 +147,9 @@
             display: flex;    
             justify-content: center;
             align-items: center;
+            @media (max-width: 350px) {
+                margin: 50px auto;
+            }
             > .tarjeta-estandar {
                 width: 90%;
                 background-color: rgb(47, 47, 47);
@@ -157,7 +163,7 @@
                 border-radius: 10px;
                 margin: 0 8px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-                @media (max-width: 570px) {
+                @media (max-width: 350px) {
                     padding: 40px 20px;
                 }
                 > .tarjeta {
@@ -172,6 +178,9 @@
                     border-radius: 10px;
                     margin: 0 8px;
                     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+                    @media (max-width: 350px) {
+                        padding: 0;
+                    }
                     &:hover {
                         background-color: rgb(255, 255, 255, 0.1);
                         border: 1px solid rgba(254, 97, 72);
@@ -180,6 +189,9 @@
                     }
                     > .tarjeta-header {
                         margin-bottom: 20px;
+                        @media (max-width: 350px) {
+                            margin-bottom: 10px;
+                        }
                         > h3 {
                             font-size: 40px;
                             font-weight: 300;
@@ -187,10 +199,17 @@
                             color: rgba(254, 97, 72, 0.9);
                             border-bottom: 1px groove #FFF;
                             padding: 10px;
+                            @media (max-width: 350px) {
+                                margin: 10px;
+                                font-size: 30px;
+                            }
                         }
                         > h2 {
                             font-size: 90px;
                             font-weight: 300;
+                            @media (max-width: 350px) {
+                                font-size: 60px;
+                            }
                         }
                     }
                     > .tarjeta-footer{
@@ -208,6 +227,10 @@
                             outline: none;
                             cursor: pointer;
                             font-family: 'Sofia Sans Extra Condensed';
+                            @media (max-width: 350px) {
+                                width: 200px; 
+                                font-size: 16px;
+                            }
                             &:hover {
                                 background-color: rgb(255, 107, 84);
                             }  
@@ -222,7 +245,7 @@
                     text-align: center;
                     border-radius: 10px;
                     margin: 0 8px;
-                    @media (max-width: 570px) {
+                    @media (max-width: 350px) {
                         margin-top: 0px;
                     }
                     > .tarjeta-header {
@@ -234,6 +257,9 @@
                             color: rgba(254, 97, 72, 0.9);
                             border-bottom: 1px groove #FFF;
                             padding: 10px;
+                            @media (max-width: 350px) {
+                                font-size: 30px;
+                            }
                         }
                     }
                     > .tarjeta-body {
@@ -243,6 +269,9 @@
                             font-weight: 300;
                             margin: 15px 0;
                             letter-spacing: 1px;
+                            @media (max-width: 350px) {
+                                font-size: 15px;
+                            }
                             > i {
                                 margin-right: 10px;
                                 
@@ -270,8 +299,10 @@
                             outline: none;
                             cursor: pointer;
                             font-family: 'Sofia Sans Extra Condensed';
-                            @media (max-width: 570px) {
-                                margin-bottom: 50px;
+                            @media (max-width: 350px) {
+                                margin-bottom: 20px;
+                                width: 200px; 
+                                font-size: 16px;
                             }
                             &:hover {
                                 background-color: rgb(255, 107, 84);
@@ -305,10 +336,16 @@
                             color: rgba(254, 97, 72, 0.9);
                             border-bottom: 1px groove #FFF;
                             padding: 10px;
+                            @media (max-width: 350px) {
+                                font-size: 30px;
+                            }
                         }
                         > h2 {
                             font-size: 90px;
                             font-weight: 300;
+                            @media (max-width: 350px) {
+                                font-size: 60px;
+                            }
                         }
                     }
                     > .tarjeta-footer{
@@ -326,6 +363,10 @@
                             outline: none;
                             cursor: pointer;
                             font-family: 'Sofia Sans Extra Condensed';
+                            @media (max-width: 350px) {
+                                width: 200px; 
+                                font-size: 16px;
+                            }
                             &:hover {
                                 background-color: rgb(255, 107, 84);
                             }  
