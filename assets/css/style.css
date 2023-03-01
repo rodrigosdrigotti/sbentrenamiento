@@ -206,7 +206,7 @@ ul {
   color: #FFF;
   z-index: -1;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index {
     background-position: 65% center;
   }
@@ -218,7 +218,7 @@ ul {
   font-size: 42px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > h1 {
     margin-left: 30px;
     font-size: 18px;
@@ -228,7 +228,7 @@ ul {
   margin-left: 100px;
   font-size: 114px;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > h2 {
     margin-left: 30px;
     font-size: 74px;
@@ -242,7 +242,7 @@ ul {
   font-size: 22px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > p {
     margin-left: 30px;
     font-size: 15px;
@@ -266,7 +266,7 @@ ul {
   letter-spacing: 1px;
   cursor: pointer;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > .botonesInicio .btn-comenzar {
     margin-left: 30px;
     font-size: 14px;
@@ -290,7 +290,7 @@ ul {
   letter-spacing: 1px;
   cursor: pointer;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > .botonesInicio .btn-masInfo {
     font-size: 14px;
     width: 100px;
@@ -305,7 +305,7 @@ ul {
   font-size: 20px;
   margin-right: 10px;
 }
-@media screen and (max-width: 490px) {
+@media (max-width: 350px) {
   .BG-index > .botonesInicio .fa-circle-chevron-right {
     font-size: 12px;
   }
@@ -317,7 +317,7 @@ ul {
   display: flex;
   text-align: center;
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 490px) {
   .entrenamientos {
     flex-direction: column;
   }
@@ -327,7 +327,7 @@ ul {
   height: 100%;
   position: relative;
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 490px) {
   .entrenamientos > .entrenamiento {
     width: 100%;
   }
