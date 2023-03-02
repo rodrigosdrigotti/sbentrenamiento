@@ -6,6 +6,10 @@
     padding: 0;
     text-align: center;
     white-space: nowrap;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: 100vh;
+    }
     .btn {
         color: black;
         background-color: rgba(254, 97, 72, 0.9);
@@ -20,12 +24,20 @@
         letter-spacing: 1px;
         cursor: pointer;
         @media (max-width: 768px) {
+            font-size: 26px;
+            width: 150px;
+            margin: 70px 0 0 0;
+        }
+        @media (max-width: 350px) {
+            font-size: 14px;
+            width: 80px;
             margin: 10px 0 0 0;
         }
     }    
 }
+
 .pageEquipamiento {
-    height: 89vh;
+    height: 70vh;
     width: 100%;
     background-image: url("..//img/fondoPared.jpg");
     background-position: center;
@@ -39,16 +51,37 @@
         padding-top: 120px;
         letter-spacing: 4px;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 76px;
+        }
+        @media (max-width: 350px) {
+            font-size: 28px;
+            padding-top: 90px;
+        }
     }
     > p {
         color: rgba(255, 255, 255, 0.45);
         margin-top: 100px;
         font-size: 80px;
         text-align: center;
+        @media (max-width: 768px) {
+            font-size: 60px;
+        }
+        @media (max-width: 350px) {
+            font-size: 30px;
+            margin: 30px 0 50px 0;
+        }
     }
     > i {
         color: rgba(255, 255, 255, 0.45);
         margin-top: 80px;
         font-size: 300px;
+        @media (max-width: 768px) {
+            font-size: 200px;
+        }
+        @media (max-width: 350px) {
+            font-size: 130px;
+            margin-top: 30px;
+        }
     }
 }

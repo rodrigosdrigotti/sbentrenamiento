@@ -163,6 +163,12 @@ ul {
     margin: 25px;
   }
 }
+@media (max-width: 350px) {
+  .header > .barraMenu > .nav > .menu > li > a {
+    font-size: 17px;
+    margin: 15px;
+  }
+}
 .header > .barraMenu > .nav > .menu > li > a:hover {
   color: rgba(254, 97, 72, 0.9);
 }
@@ -198,6 +204,13 @@ ul {
     margin: 10px 0 0 0;
   }
 }
+@media (max-width: 350px) {
+  .header > .barraMenu > .nav > .menu > li > .btn {
+    font-size: 14px;
+    width: 80px;
+    margin: 10px 0 0 0;
+  }
+}
 .header > .barraMenu > .nav .menu-form {
   display: flex;
   align-items: center;
@@ -218,6 +231,13 @@ ul {
     font-size: 26px;
     width: 150px;
     margin: 70px 0 0 0;
+  }
+}
+@media (max-width: 350px) {
+  .header > .barraMenu > .nav .menu-form .btn {
+    font-size: 14px;
+    width: 80px;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -1353,6 +1373,12 @@ ul {
   text-align: center;
   white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .menu-form {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
 .menu-form .btn {
   color: black;
   background-color: rgba(254, 97, 72, 0.9);
@@ -1369,12 +1395,21 @@ ul {
 }
 @media (max-width: 768px) {
   .menu-form .btn {
+    font-size: 26px;
+    width: 150px;
+    margin: 70px 0 0 0;
+  }
+}
+@media (max-width: 350px) {
+  .menu-form .btn {
+    font-size: 14px;
+    width: 80px;
     margin: 10px 0 0 0;
   }
 }
 
 .pageEquipamiento {
-  height: 89vh;
+  height: 70vh;
   width: 100%;
   background-image: url("..//img/fondoPared.jpg");
   background-position: center;
@@ -1390,16 +1425,49 @@ ul {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .pageEquipamiento > h1 {
+    font-size: 76px;
+  }
+}
+@media (max-width: 350px) {
+  .pageEquipamiento > h1 {
+    font-size: 28px;
+    padding-top: 90px;
+  }
+}
 .pageEquipamiento > p {
   color: rgba(255, 255, 255, 0.45);
   margin-top: 100px;
   font-size: 80px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .pageEquipamiento > p {
+    font-size: 60px;
+  }
+}
+@media (max-width: 350px) {
+  .pageEquipamiento > p {
+    font-size: 30px;
+    margin: 30px 0 50px 0;
+  }
+}
 .pageEquipamiento > i {
   color: rgba(255, 255, 255, 0.45);
   margin-top: 80px;
   font-size: 300px;
+}
+@media (max-width: 768px) {
+  .pageEquipamiento > i {
+    font-size: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .pageEquipamiento > i {
+    font-size: 130px;
+    margin-top: 30px;
+  }
 }
 
 .pageFormulario {
@@ -1730,6 +1798,11 @@ ul {
 @media (max-width: 768px) {
   .footer > .contacto > .formularioContacto {
     width: 500px;
+  }
+}
+@media (max-width: 350px) {
+  .footer > .contacto > .formularioContacto {
+    width: 250px;
   }
 }
 .footer > .contacto > .formularioContacto > input {

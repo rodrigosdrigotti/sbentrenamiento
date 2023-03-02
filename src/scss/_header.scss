@@ -126,6 +126,10 @@
                             font-size: 30px;
                             margin: 25px;
                         }
+                        @media (max-width: 350px) {
+                            font-size: 17px;
+                            margin: 15px;
+                        }
                         &:hover {
                             color: rgba(254, 97, 72, 0.9);
                         }
@@ -159,6 +163,11 @@
                             width: 150px;
                             margin: 10px 0 0 0;
                         }
+                        @media (max-width: 350px) {
+                            font-size: 14px;
+                            width: 80px;
+                            margin: 10px 0 0 0;
+                        }
                     }     
                 }
             }
@@ -179,6 +188,11 @@
                         font-size: 26px;
                         width: 150px;
                         margin: 70px 0 0 0;
+                    }
+                    @media (max-width: 350px) {
+                        font-size: 14px;
+                        width: 80px;
+                        margin: 10px 0 0 0;
                     }
                 }
             }

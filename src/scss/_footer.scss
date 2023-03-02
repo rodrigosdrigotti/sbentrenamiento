@@ -87,6 +87,9 @@
             @media (max-width: 768px) {
                 width: 500px;
             }
+            @media (max-width: 350px) {
+                width: 250px;
+            }
             > input {
                 height: 40px;
                 background: none;
