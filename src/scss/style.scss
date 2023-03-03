@@ -58,6 +58,22 @@ body {
     }
 }
 
+@media (max-width: 490px) {
+    .faqs {
+        padding: 50px 60px;
+    }
+    .faqs h2 {
+        font-size: 36px;
+    }
+    .faqs h4 {
+        font-size: 24px;
+    }
+    .faqs p {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
+
 @media (max-width: 350px) {
     .faqs {
         padding: 50px 25px;

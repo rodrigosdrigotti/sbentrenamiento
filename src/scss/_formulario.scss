@@ -16,6 +16,10 @@
         @media (max-width: 768px) {
             font-size: 46px;
         }
+        @media (max-width: 490px) {
+            font-size: 32px;
+            padding: 40px 30px 0 30px;
+        }
         @media (max-width: 350px) {
             font-size: 28px;
             padding: 40px 40px 0 40px;
@@ -31,9 +35,9 @@
             font-size: 28px;
             padding: 0 100px;
         }
-        @media (max-width: 350px) {
-            padding: 0 40px;
+        @media (max-width: 490px) {
             font-size: 20px;
+            padding: 0 40px;
             margin-top: 30px;
         }
     }
@@ -72,6 +76,13 @@
         box-shadow:0px 2px 10px rgba(0,0,0,0.3);
         border-radius:5px;
         transition:transform 0.2s ease-in-out;
+        @media (max-width: 490px) {
+            width: 100%;
+            padding: 40px;
+        }
+        @media (max-width: 350px) {
+            padding: 30px;
+        }
         p {
             font-weight: bolder;
             text-align:justify;

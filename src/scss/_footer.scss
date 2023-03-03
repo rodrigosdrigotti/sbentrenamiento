@@ -31,6 +31,9 @@
             @media (max-width: 768px) {
                 font-size: 54px;
             }
+            @media (max-width: 768px) {
+                font-size: 48px;
+            }
             @media (max-width: 350px) {
                 font-size: 34px;
             }
@@ -39,11 +42,14 @@
             @media (max-width: 768px) {
                 margin-top: -10px;
                 font-size: 36px;
-                }
+            }
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
             @media (max-width: 350px) {
                 margin-top: -10px;
                 font-size: 20px;
-                }
+            }
             }
         > .footer-icons {
             width: 150px;
@@ -57,6 +63,9 @@
             @media (max-width: 768px) {
                 margin-top: -10px;
                 font-size: 40px;
+            }
+            @media (max-width: 490px) {
+                font-size: 30px;
             }
             @media (max-width: 350px) {
                 margin-top: -10px;
@@ -87,6 +96,9 @@
             @media (max-width: 768px) {
                 width: 500px;
             }
+            @media (max-width: 490px) {
+                width: 380px;
+            }
             @media (max-width: 350px) {
                 width: 250px;
             }
@@ -100,6 +112,9 @@
                 outline: none; 
                 @media (max-width: 768px) {
                     font-size: 26px;
+                }
+                @media (max-width: 490px) {
+                    font-size: 20px;
                 }
                 @media (max-width: 350px) {
                     font-size: 16px;
@@ -118,6 +133,9 @@
                 outline: none;  
                 @media (max-width: 768px) {
                     font-size: 26px;
+                }
+                @media (max-width: 490px) {
+                    font-size: 20px;
                 }
                 @media (max-width: 350px) {
                     font-size: 16px;
@@ -140,6 +158,11 @@
                     width: 180px;
                     height: 55px;
                     font-size: 26px;
+                }
+                @media (max-width: 490px) {
+                    width: 150px;
+                    height: 45px;
+                    font-size: 20px;
                 }
                 @media (max-width: 350px) {
                     height: 35px;
